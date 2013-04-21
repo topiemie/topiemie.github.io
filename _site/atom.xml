@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>程序员爸爸的博客</title>
- <link href="http://topiemie.github.com/" rel="self"/>
- <link href="http://topiemie.github.com"/>
- <updated>2013-04-21T14:24:25+08:00</updated>
- <id>http://topiemie.github.com</id>
+ <link href="http://sj.qmcr.me/" rel="self"/>
+ <link href="http://sj.qmcr.me"/>
+ <updated>2013-04-21T14:43:25+08:00</updated>
+ <id>http://sj.qmcr.me</id>
  <author>
    <name>Shen Jian</name>
    <email>sj@qmcr.me</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>jekyll如何对page排序</title>
-   <link href="http://topiemie.github.com/tips/2013/04/21/jekyll_page_sort"/>
+   <link href="http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort"/>
    <updated>2013-04-21T00:00:00+08:00</updated>
-   <id>http://topiemie.github.com/tips/2013/04/21/jekyll_page_sort</id>
+   <id>http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort</id>
    <content type="html">&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
     {\% for weight in (1..10) \%}
         {\% for p in site.pages \%}

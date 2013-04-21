@@ -3,10 +3,10 @@
 <channel>
         <title>程序员爸爸的博客</title>
         <description>程序员爸爸的博客 - Shen Jian</description>
-        <link>http://topiemie.github.com</link>
-        <link>http://topiemie.github.com</link>
-        <lastBuildDate>2013-04-21T14:24:25+08:00</lastBuildDate>
-        <pubDate>2013-04-21T14:24:25+08:00</pubDate>
+        <link>http://sj.qmcr.me</link>
+        <link>http://sj.qmcr.me</link>
+        <lastBuildDate>2013-04-21T14:43:25+08:00</lastBuildDate>
+        <pubDate>2013-04-21T14:43:25+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -23,8 +23,8 @@
         {\% endfor \%}
     {\% endfor \%}
 &amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description>
-                <link>http://topiemie.github.com/tips/2013/04/21/jekyll_page_sort</link>
-                <guid>http://topiemie.github.com/tips/2013/04/21/jekyll_page_sort</guid>
+                <link>http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort</link>
+                <guid>http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort</guid>
                 <pubDate>2013-04-21T00:00:00+08:00</pubDate>
         </item>
 

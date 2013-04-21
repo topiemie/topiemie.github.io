@@ -1,12 +1,12 @@
 
-http://topiemie.github.com/atom.xml
-http://topiemie.github.com/develop.html
-http://topiemie.github.com/essay.html
-http://topiemie.github.com/index.html
-http://topiemie.github.com/industry.html
-http://topiemie.github.com/rss.xml
-http://topiemie.github.com/sitemap.txt
-http://topiemie.github.com/tips.html
-http://topiemie.github.com/website.html
+http://sj.qmcr.me/atom.xml
+http://sj.qmcr.me/develop.html
+http://sj.qmcr.me/essay.html
+http://sj.qmcr.me/index.html
+http://sj.qmcr.me/industry.html
+http://sj.qmcr.me/rss.xml
+http://sj.qmcr.me/sitemap.txt
+http://sj.qmcr.me/tips.html
+http://sj.qmcr.me/website.html
 
-http://topiemie.github.com/tips/2013/04/21/jekyll_page_sort
+http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort
