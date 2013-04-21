@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>程序员爸爸的博客</title>
+        <description>程序员爸爸的博客 - Shen Jian</description>
+        <link>http://username.github.com</link>
+        <link>http://username.github.com</link>
+        <lastBuildDate>2013-04-21T11:41:16+08:00</lastBuildDate>
+        <pubDate>2013-04-21T11:41:16+08:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>jekyll如何对page排序</title>
+                <description>&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+    {\% for weight in (1..10) \%}
+        {\% for p in site.pages \%}
+        {\% if p.weight == weight \%}
+&amp;lt;li&amp;gt;
+    &amp;lt;a {\% if p.url == page.url \%}class=&amp;quot;active&amp;quot;{\% endif \%} href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+    {\% endif \%}
+        {\% endfor \%}
+    {\% endfor \%}
+&amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description>
+                <link>http://username.github.com/tips/2013/04/21/jekyll_page_sort</link>
+                <guid>http://username.github.com/tips/2013/04/21/jekyll_page_sort</guid>
+                <pubDate>2013-04-21T00:00:00+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

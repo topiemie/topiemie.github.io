@@ -9,10 +9,10 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : 程序员爸爸的博客
 tagline: Site Tagline
 author :
-  name : Name Lastname
+  name : Shen Jian
   email : blah@email.test
   github : username
   twitter : username
@@ -81,7 +81,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : custom
     disqus :
       short_name : jekyllbootstrap
     livefyre :
