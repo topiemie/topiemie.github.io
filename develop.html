@@ -4,8 +4,8 @@ title : 软件研发
 header : 软件研发
 group: navigation
 weight: 3
+whoami: develop
 ---
 {% include JB/setup %}
-
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+{% assign posts_collate = site.tags.develop %}
+{% include custom/posts_collate %}

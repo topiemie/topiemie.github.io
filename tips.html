@@ -4,11 +4,8 @@ title: 经验技巧
 header: 经验技巧
 group: navigation
 weight: 7
+whoami: tips
 ---
 {% include JB/setup %}
-
-<h2>经验技巧</h2>
-<ul>
-{% assign pages_list = site.pages %}
-{% include JB/pages_list %}
-</ul>
+{% assign posts_collate = site.tags.tips %}
+{% include custom/posts_collate %}
