@@ -7,4 +7,4 @@ tagline: Supporting tagline
 
 ## 前言
 
-{% include JB/analytics %}
+
