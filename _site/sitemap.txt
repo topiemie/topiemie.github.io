@@ -1,4 +1,5 @@
 
+http://sj.qmcr.me/archive.html
 http://sj.qmcr.me/atom.xml
 http://sj.qmcr.me/develop.html
 http://sj.qmcr.me/essay.html
@@ -9,4 +10,5 @@ http://sj.qmcr.me/sitemap.txt
 http://sj.qmcr.me/tips.html
 http://sj.qmcr.me/website.html
 
+http://sj.qmcr.me/2013/04/22/modernie-chinese-version-release
 http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort
