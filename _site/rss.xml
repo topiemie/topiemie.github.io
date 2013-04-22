@@ -5,8 +5,8 @@
         <description>程序员爸爸的博客 - Shen Jian</description>
         <link>http://sj.qmcr.me</link>
         <link>http://sj.qmcr.me</link>
-        <lastBuildDate>2013-04-22T09:49:49+08:00</lastBuildDate>
-        <pubDate>2013-04-22T09:49:49+08:00</pubDate>
+        <lastBuildDate>2013-04-22T13:15:24+08:00</lastBuildDate>
+        <pubDate>2013-04-22T13:15:24+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -115,6 +115,81 @@
 &lt;p&gt;原文地址：&lt;a href='http://www.uisdc.com/modern-ie-browserstack'&gt;http://www.uisdc.com/modern-ie-browserstack&lt;/a&gt;&lt;/p&gt;</description>
                 <link>http://sj.qmcr.me/2013/04/22/modernie-chinese-version-release</link>
                 <guid>http://sj.qmcr.me/2013/04/22/modernie-chinese-version-release</guid>
+                <pubDate>2013-04-22T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>google开源了内部压缩/解压缩类库-snappy，性能相当惊人</title>
+                <description>&lt;p&gt;项目主页： &lt;a href='http://code.google.com/p/snappy/'&gt;http://code.google.com/p/snappy/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Snappy is a compression/decompression library.&lt;/p&gt;&lt;p&gt;It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.&lt;/p&gt;&lt;p&gt;For instance, compared to the fastest mode of zlib, Snappy is an order of magnitude faster for most inputs, but the resulting compressed files are anywhere from 20% to 100% bigger.&lt;/p&gt;&lt;p&gt;On a single core of a Core i7 processor in 64-bit mode, Snappy compresses at about 250 MB/sec or more and decompresses at about 500 MB/sec or more.&lt;/p&gt;&lt;p&gt;Snappy is widely used inside Google, in everything from BigTable and MapReduce to our internal RPC systems.&lt;/p&gt;&lt;p&gt;(Snappy has previously been referred to as “Zippy” in some presentations and the likes.)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ svn checkout http://snappy.googlecode.com/svn/trunk/ snappy &amp;amp;&amp;amp; cd snappy 
+$ ./configure &amp;amp;&amp;amp; make
+$ ./snappy_unittest&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running microbenchmarks. WARNING: Compiled with assertions enabled, will be slow.&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Benchmark&lt;/th&gt;&lt;th&gt;Time(ns)&lt;/th&gt;&lt;th&gt;CPU(ns)&lt;/th&gt;&lt;th&gt;Iterations&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/0&lt;/td&gt;&lt;td style='text-align: right;'&gt;223919&lt;/td&gt;&lt;td style='text-align: right;'&gt;223930&lt;/td&gt;&lt;td style='text-align: right;'&gt;893 436.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/1&lt;/td&gt;&lt;td style='text-align: right;'&gt;2161619&lt;/td&gt;&lt;td style='text-align: right;'&gt;2162717&lt;/td&gt;&lt;td style='text-align: right;'&gt;92 309.6MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;urls&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/2&lt;/td&gt;&lt;td style='text-align: right;'&gt;54322&lt;/td&gt;&lt;td style='text-align: right;'&gt;54137&lt;/td&gt;&lt;td style='text-align: right;'&gt;3269 2.2GB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;jpg&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/3&lt;/td&gt;&lt;td style='text-align: right;'&gt;102384&lt;/td&gt;&lt;td style='text-align: right;'&gt;102334&lt;/td&gt;&lt;td style='text-align: right;'&gt;1915 879.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;pdf&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/4&lt;/td&gt;&lt;td style='text-align: right;'&gt;904663&lt;/td&gt;&lt;td style='text-align: right;'&gt;899863&lt;/td&gt;&lt;td style='text-align: right;'&gt;220 434.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html4&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/5&lt;/td&gt;&lt;td style='text-align: right;'&gt;86095&lt;/td&gt;&lt;td style='text-align: right;'&gt;86380&lt;/td&gt;&lt;td style='text-align: right;'&gt;2315 271.6MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;cp&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/6&lt;/td&gt;&lt;td style='text-align: right;'&gt;40602&lt;/td&gt;&lt;td style='text-align: right;'&gt;40607&lt;/td&gt;&lt;td style='text-align: right;'&gt;5023 261.9MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;c&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/7&lt;/td&gt;&lt;td style='text-align: right;'&gt;13244&lt;/td&gt;&lt;td style='text-align: right;'&gt;13198&lt;/td&gt;&lt;td style='text-align: right;'&gt;15151 268.9MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;lsp&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/8&lt;/td&gt;&lt;td style='text-align: right;'&gt;3956500&lt;/td&gt;&lt;td style='text-align: right;'&gt;3939400&lt;/td&gt;&lt;td style='text-align: right;'&gt;50 249.3MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;xls&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/9&lt;/td&gt;&lt;td style='text-align: right;'&gt;762839&lt;/td&gt;&lt;td style='text-align: right;'&gt;762337&lt;/td&gt;&lt;td style='text-align: right;'&gt;261 190.3MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt1&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/10&lt;/td&gt;&lt;td style='text-align: right;'&gt;653573&lt;/td&gt;&lt;td style='text-align: right;'&gt;655639&lt;/td&gt;&lt;td style='text-align: right;'&gt;305 182.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt2&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/11&lt;/td&gt;&lt;td style='text-align: right;'&gt;1997280&lt;/td&gt;&lt;td style='text-align: right;'&gt;1999700&lt;/td&gt;&lt;td style='text-align: right;'&gt;100 203.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt3&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/12&lt;/td&gt;&lt;td style='text-align: right;'&gt;2717739&lt;/td&gt;&lt;td style='text-align: right;'&gt;2711917&lt;/td&gt;&lt;td style='text-align: right;'&gt;73 169.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt4&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/13&lt;/td&gt;&lt;td style='text-align: right;'&gt;1051349&lt;/td&gt;&lt;td style='text-align: right;'&gt;1047460&lt;/td&gt;&lt;td style='text-align: right;'&gt;189 467.3MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;bin&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/14&lt;/td&gt;&lt;td style='text-align: right;'&gt;147776&lt;/td&gt;&lt;td style='text-align: right;'&gt;147252&lt;/td&gt;&lt;td style='text-align: right;'&gt;1358 247.7MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;sum&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/15&lt;/td&gt;&lt;td style='text-align: right;'&gt;16914&lt;/td&gt;&lt;td style='text-align: right;'&gt;16913&lt;/td&gt;&lt;td style='text-align: right;'&gt;11173 238.3MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;man&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/16&lt;/td&gt;&lt;td style='text-align: right;'&gt;239393&lt;/td&gt;&lt;td style='text-align: right;'&gt;238573&lt;/td&gt;&lt;td style='text-align: right;'&gt;834 399.7MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;pb&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UFlat/17&lt;/td&gt;&lt;td style='text-align: right;'&gt;791722&lt;/td&gt;&lt;td style='text-align: right;'&gt;793527&lt;/td&gt;&lt;td style='text-align: right;'&gt;252 221.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;gaviota&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UValidate/0&lt;/td&gt;&lt;td style='text-align: right;'&gt;108440&lt;/td&gt;&lt;td style='text-align: right;'&gt;108560&lt;/td&gt;&lt;td style='text-align: right;'&gt;1842 899.6MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UValidate/1&lt;/td&gt;&lt;td style='text-align: right;'&gt;1187755&lt;/td&gt;&lt;td style='text-align: right;'&gt;1190291&lt;/td&gt;&lt;td style='text-align: right;'&gt;168 562.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;urls&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UValidate/2&lt;/td&gt;&lt;td style='text-align: right;'&gt;657&lt;/td&gt;&lt;td style='text-align: right;'&gt;658&lt;/td&gt;&lt;td style='text-align: right;'&gt;289855 179.5GB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;jpg&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UValidate/3&lt;/td&gt;&lt;td style='text-align: right;'&gt;37172&lt;/td&gt;&lt;td style='text-align: right;'&gt;37224&lt;/td&gt;&lt;td style='text-align: right;'&gt;5372 2.4GB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;pdf&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_UValidate/4&lt;/td&gt;&lt;td style='text-align: right;'&gt;438133&lt;/td&gt;&lt;td style='text-align: right;'&gt;438530&lt;/td&gt;&lt;td style='text-align: right;'&gt;456 890.8MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html4&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/0&lt;/td&gt;&lt;td style='text-align: right;'&gt;918760&lt;/td&gt;&lt;td style='text-align: right;'&gt;916912&lt;/td&gt;&lt;td style='text-align: right;'&gt;217 106.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html (23.57 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/1&lt;/td&gt;&lt;td style='text-align: right;'&gt;9691700&lt;/td&gt;&lt;td style='text-align: right;'&gt;9698550&lt;/td&gt;&lt;td style='text-align: right;'&gt;20 69.0MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;urls (50.89 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/2&lt;/td&gt;&lt;td style='text-align: right;'&gt;169311&lt;/td&gt;&lt;td style='text-align: right;'&gt;168772&lt;/td&gt;&lt;td style='text-align: right;'&gt;1173 717.4MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;jpg (99.88 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/3&lt;/td&gt;&lt;td style='text-align: right;'&gt;417202&lt;/td&gt;&lt;td style='text-align: right;'&gt;416255&lt;/td&gt;&lt;td style='text-align: right;'&gt;478 216.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;pdf (82.13 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/4&lt;/td&gt;&lt;td style='text-align: right;'&gt;3691074&lt;/td&gt;&lt;td style='text-align: right;'&gt;3703129&lt;/td&gt;&lt;td style='text-align: right;'&gt;54 105.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;html4 (23.55 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/5&lt;/td&gt;&lt;td style='text-align: right;'&gt;356185&lt;/td&gt;&lt;td style='text-align: right;'&gt;357089&lt;/td&gt;&lt;td style='text-align: right;'&gt;560 65.7MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;cp (48.12 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/6&lt;/td&gt;&lt;td style='text-align: right;'&gt;155500&lt;/td&gt;&lt;td style='text-align: right;'&gt;155339&lt;/td&gt;&lt;td style='text-align: right;'&gt;1268 68.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;c (42.40 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/7&lt;/td&gt;&lt;td style='text-align: right;'&gt;52200&lt;/td&gt;&lt;td style='text-align: right;'&gt;52129&lt;/td&gt;&lt;td style='text-align: right;'&gt;3836 68.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;lsp (48.37 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/8&lt;/td&gt;&lt;td style='text-align: right;'&gt;12006875&lt;/td&gt;&lt;td style='text-align: right;'&gt;11998187&lt;/td&gt;&lt;td style='text-align: right;'&gt;16 81.8MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;xls (41.34 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/9&lt;/td&gt;&lt;td style='text-align: right;'&gt;2785472&lt;/td&gt;&lt;td style='text-align: right;'&gt;2777361&lt;/td&gt;&lt;td style='text-align: right;'&gt;72 52.2MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt1 (59.81 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/10&lt;/td&gt;&lt;td style='text-align: right;'&gt;2381506&lt;/td&gt;&lt;td style='text-align: right;'&gt;2385180&lt;/td&gt;&lt;td style='text-align: right;'&gt;83 50.1MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt2 (64.07 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/11&lt;/td&gt;&lt;td style='text-align: right;'&gt;7528884&lt;/td&gt;&lt;td style='text-align: right;'&gt;7498846&lt;/td&gt;&lt;td style='text-align: right;'&gt;26 54.3MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt3 (57.11 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/12&lt;/td&gt;&lt;td style='text-align: right;'&gt;9649700&lt;/td&gt;&lt;td style='text-align: right;'&gt;9598500&lt;/td&gt;&lt;td style='text-align: right;'&gt;20 47.9MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;txt4 (68.35 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/13&lt;/td&gt;&lt;td style='text-align: right;'&gt;3784346&lt;/td&gt;&lt;td style='text-align: right;'&gt;3787884&lt;/td&gt;&lt;td style='text-align: right;'&gt;52 129.2MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;bin (18.21 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/14&lt;/td&gt;&lt;td style='text-align: right;'&gt;564691&lt;/td&gt;&lt;td style='text-align: right;'&gt;566487&lt;/td&gt;&lt;td style='text-align: right;'&gt;353 64.4MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;sum (51.88 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/15&lt;/td&gt;&lt;td style='text-align: right;'&gt;67413&lt;/td&gt;&lt;td style='text-align: right;'&gt;67366&lt;/td&gt;&lt;td style='text-align: right;'&gt;2909 59.8MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;man (59.36 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/16&lt;/td&gt;&lt;td style='text-align: right;'&gt;903805&lt;/td&gt;&lt;td style='text-align: right;'&gt;904841&lt;/td&gt;&lt;td style='text-align: right;'&gt;221 105.4MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;pb (23.49 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style='text-align: left;'&gt;BM_ZFlat/17&lt;/td&gt;&lt;td style='text-align: right;'&gt;2509924&lt;/td&gt;&lt;td style='text-align: right;'&gt;2493291&lt;/td&gt;&lt;td style='text-align: right;'&gt;79 70.5MB/s&lt;/td&gt;&lt;td style='text-align: right;'&gt;gaviota (38.27 %)&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;Running correctness tests. All tests passed.&lt;/p&gt;</description>
+                <link>http://sj.qmcr.me/2013/04/22/google-opensource-compression-decompression-library-snappy</link>
+                <guid>http://sj.qmcr.me/2013/04/22/google-opensource-compression-decompression-library-snappy</guid>
+                <pubDate>2013-04-22T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>高德导航地图限时免费序列号</title>
+                <description>&lt;p&gt;高德导航是高德的收费软件，现在高德宣布免费持续到29日8:02，包括IOS和Android。2013年4月29日8时02分之前可免费申请序列号：&lt;/p&gt;
+
+&lt;p&gt;① 移动手机用户发送“高德、导航、地图、地震、雅安、灾区、救灾、加油、救援、救助、救命、求助、位置、安卓、公众版、Amap、Autonavi”中任意一词到1065 7502 0963 666或1065 7502 0963 668即可获取高德导航序列号；&lt;/p&gt;
+
+&lt;p&gt;② 用户可通过在新浪微博发布“高德导航序列号”并@高德导航 或拨打高德客服电话400-810-0080免费获取高德导航序列号；&lt;/p&gt;
+
+&lt;p&gt;iOS版下载：http://itunes.apple.com/cn/app/id324101974?mt=8&lt;/p&gt;
+
+&lt;p&gt;Android版：http://c.autonavi.com/club/android/&lt;/p&gt;
+
+&lt;p&gt;高德导航雅安版（安卓）：http://mlbsdown.autonavi.com/navi/Autonavi_yaan.apk&lt;/p&gt;</description>
+                <link>http://sj.qmcr.me/2013/04/22/amap-free-license</link>
+                <guid>http://sj.qmcr.me/2013/04/22/amap-free-license</guid>
                 <pubDate>2013-04-22T00:00:00+08:00</pubDate>
         </item>
 

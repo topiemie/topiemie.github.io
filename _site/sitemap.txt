@@ -11,4 +11,6 @@ http://sj.qmcr.me/tips.html
 http://sj.qmcr.me/website.html
 
 http://sj.qmcr.me/2013/04/22/modernie-chinese-version-release
+http://sj.qmcr.me/2013/04/22/google-opensource-compression-decompression-library-snappy
+http://sj.qmcr.me/2013/04/22/amap-free-license
 http://sj.qmcr.me/tips/2013/04/21/jekyll_page_sort

@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>google开源了内部压缩/解压缩类库-snappy，性能相当惊人</title>
+    <meta name="description" content="snappy在google内部如BigTable和MapReduce中广泛应用，单核i7CPU压缩速度可以达到250MB/sec，解压缩速度达到500MB/sec">
+    <meta name="author" content="Shen Jian">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <IMG SRC="/assets/themes/twitter/skin/sjlogo.png" style="float:left;display:block;padding:5px;" WIDTH="35px" HEIGHT="35px"alt="程序员爸爸的博客"/>
+          <a class="brand" href="/"> 程序员爸爸的博客</a>
+          <ul class="nav">
+            
+            
+            
+
+<li><a href="/industry.html">业界动态</a></li><li><a href="/develop.html">软件研发</a></li><li><a href="/website.html">网站建设</a></li><li><a href="/tips.html">经验技巧</a></li><li><a href="/essay.html">随笔</a></li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-narrow">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>google开源了内部压缩/解压缩类库-snappy，性能相当惊人 </h1>
+</div>
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_1"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a class="jiathis_button_tools_4"></a>
+	<a href="http://www.jiathis.com/share?uid=1768615" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1366096469520422" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>22 April 2013</strong>
+    </div>
+    <div class="content">
+      <p>项目主页： <a href='http://code.google.com/p/snappy/'>http://code.google.com/p/snappy/</a></p>
+<p>Snappy is a compression/decompression library.</p><p>It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.</p><p>For instance, compared to the fastest mode of zlib, Snappy is an order of magnitude faster for most inputs, but the resulting compressed files are anywhere from 20% to 100% bigger.</p><p>On a single core of a Core i7 processor in 64-bit mode, Snappy compresses at about 250 MB/sec or more and decompresses at about 500 MB/sec or more.</p><p>Snappy is widely used inside Google, in everything from BigTable and MapReduce to our internal RPC systems.</p><p>(Snappy has previously been referred to as “Zippy” in some presentations and the likes.)</p>
+<pre><code>$ svn checkout http://snappy.googlecode.com/svn/trunk/ snappy &amp;&amp; cd snappy 
+$ ./configure &amp;&amp; make
+$ ./snappy_unittest</code></pre>
+
+<p>Running microbenchmarks. WARNING: Compiled with assertions enabled, will be slow.</p>
+<table><thead><tr><th>Benchmark</th><th>Time(ns)</th><th>CPU(ns)</th><th>Iterations</th><th>Type</th></tr></thead><tbody><tr><td style='text-align: left;'>BM_UFlat/0</td><td style='text-align: right;'>223919</td><td style='text-align: right;'>223930</td><td style='text-align: right;'>893 436.1MB/s</td><td style='text-align: right;'>html</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/1</td><td style='text-align: right;'>2161619</td><td style='text-align: right;'>2162717</td><td style='text-align: right;'>92 309.6MB/s</td><td style='text-align: right;'>urls</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/2</td><td style='text-align: right;'>54322</td><td style='text-align: right;'>54137</td><td style='text-align: right;'>3269 2.2GB/s</td><td style='text-align: right;'>jpg</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/3</td><td style='text-align: right;'>102384</td><td style='text-align: right;'>102334</td><td style='text-align: right;'>1915 879.1MB/s</td><td style='text-align: right;'>pdf</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/4</td><td style='text-align: right;'>904663</td><td style='text-align: right;'>899863</td><td style='text-align: right;'>220 434.1MB/s</td><td style='text-align: right;'>html4</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/5</td><td style='text-align: right;'>86095</td><td style='text-align: right;'>86380</td><td style='text-align: right;'>2315 271.6MB/s</td><td style='text-align: right;'>cp</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/6</td><td style='text-align: right;'>40602</td><td style='text-align: right;'>40607</td><td style='text-align: right;'>5023 261.9MB/s</td><td style='text-align: right;'>c</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/7</td><td style='text-align: right;'>13244</td><td style='text-align: right;'>13198</td><td style='text-align: right;'>15151 268.9MB/s</td><td style='text-align: right;'>lsp</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/8</td><td style='text-align: right;'>3956500</td><td style='text-align: right;'>3939400</td><td style='text-align: right;'>50 249.3MB/s</td><td style='text-align: right;'>xls</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/9</td><td style='text-align: right;'>762839</td><td style='text-align: right;'>762337</td><td style='text-align: right;'>261 190.3MB/s</td><td style='text-align: right;'>txt1</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/10</td><td style='text-align: right;'>653573</td><td style='text-align: right;'>655639</td><td style='text-align: right;'>305 182.1MB/s</td><td style='text-align: right;'>txt2</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/11</td><td style='text-align: right;'>1997280</td><td style='text-align: right;'>1999700</td><td style='text-align: right;'>100 203.5MB/s</td><td style='text-align: right;'>txt3</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/12</td><td style='text-align: right;'>2717739</td><td style='text-align: right;'>2711917</td><td style='text-align: right;'>73 169.5MB/s</td><td style='text-align: right;'>txt4</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/13</td><td style='text-align: right;'>1051349</td><td style='text-align: right;'>1047460</td><td style='text-align: right;'>189 467.3MB/s</td><td style='text-align: right;'>bin</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/14</td><td style='text-align: right;'>147776</td><td style='text-align: right;'>147252</td><td style='text-align: right;'>1358 247.7MB/s</td><td style='text-align: right;'>sum</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/15</td><td style='text-align: right;'>16914</td><td style='text-align: right;'>16913</td><td style='text-align: right;'>11173 238.3MB/s</td><td style='text-align: right;'>man</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/16</td><td style='text-align: right;'>239393</td><td style='text-align: right;'>238573</td><td style='text-align: right;'>834 399.7MB/s</td><td style='text-align: right;'>pb</td>
+</tr><tr><td style='text-align: left;'>BM_UFlat/17</td><td style='text-align: right;'>791722</td><td style='text-align: right;'>793527</td><td style='text-align: right;'>252 221.5MB/s</td><td style='text-align: right;'>gaviota</td>
+</tr><tr><td style='text-align: left;'>BM_UValidate/0</td><td style='text-align: right;'>108440</td><td style='text-align: right;'>108560</td><td style='text-align: right;'>1842 899.6MB/s</td><td style='text-align: right;'>html</td>
+</tr><tr><td style='text-align: left;'>BM_UValidate/1</td><td style='text-align: right;'>1187755</td><td style='text-align: right;'>1190291</td><td style='text-align: right;'>168 562.5MB/s</td><td style='text-align: right;'>urls</td>
+</tr><tr><td style='text-align: left;'>BM_UValidate/2</td><td style='text-align: right;'>657</td><td style='text-align: right;'>658</td><td style='text-align: right;'>289855 179.5GB/s</td><td style='text-align: right;'>jpg</td>
+</tr><tr><td style='text-align: left;'>BM_UValidate/3</td><td style='text-align: right;'>37172</td><td style='text-align: right;'>37224</td><td style='text-align: right;'>5372 2.4GB/s</td><td style='text-align: right;'>pdf</td>
+</tr><tr><td style='text-align: left;'>BM_UValidate/4</td><td style='text-align: right;'>438133</td><td style='text-align: right;'>438530</td><td style='text-align: right;'>456 890.8MB/s</td><td style='text-align: right;'>html4</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/0</td><td style='text-align: right;'>918760</td><td style='text-align: right;'>916912</td><td style='text-align: right;'>217 106.5MB/s</td><td style='text-align: right;'>html (23.57 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/1</td><td style='text-align: right;'>9691700</td><td style='text-align: right;'>9698550</td><td style='text-align: right;'>20 69.0MB/s</td><td style='text-align: right;'>urls (50.89 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/2</td><td style='text-align: right;'>169311</td><td style='text-align: right;'>168772</td><td style='text-align: right;'>1173 717.4MB/s</td><td style='text-align: right;'>jpg (99.88 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/3</td><td style='text-align: right;'>417202</td><td style='text-align: right;'>416255</td><td style='text-align: right;'>478 216.1MB/s</td><td style='text-align: right;'>pdf (82.13 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/4</td><td style='text-align: right;'>3691074</td><td style='text-align: right;'>3703129</td><td style='text-align: right;'>54 105.5MB/s</td><td style='text-align: right;'>html4 (23.55 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/5</td><td style='text-align: right;'>356185</td><td style='text-align: right;'>357089</td><td style='text-align: right;'>560 65.7MB/s</td><td style='text-align: right;'>cp (48.12 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/6</td><td style='text-align: right;'>155500</td><td style='text-align: right;'>155339</td><td style='text-align: right;'>1268 68.5MB/s</td><td style='text-align: right;'>c (42.40 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/7</td><td style='text-align: right;'>52200</td><td style='text-align: right;'>52129</td><td style='text-align: right;'>3836 68.1MB/s</td><td style='text-align: right;'>lsp (48.37 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/8</td><td style='text-align: right;'>12006875</td><td style='text-align: right;'>11998187</td><td style='text-align: right;'>16 81.8MB/s</td><td style='text-align: right;'>xls (41.34 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/9</td><td style='text-align: right;'>2785472</td><td style='text-align: right;'>2777361</td><td style='text-align: right;'>72 52.2MB/s</td><td style='text-align: right;'>txt1 (59.81 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/10</td><td style='text-align: right;'>2381506</td><td style='text-align: right;'>2385180</td><td style='text-align: right;'>83 50.1MB/s</td><td style='text-align: right;'>txt2 (64.07 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/11</td><td style='text-align: right;'>7528884</td><td style='text-align: right;'>7498846</td><td style='text-align: right;'>26 54.3MB/s</td><td style='text-align: right;'>txt3 (57.11 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/12</td><td style='text-align: right;'>9649700</td><td style='text-align: right;'>9598500</td><td style='text-align: right;'>20 47.9MB/s</td><td style='text-align: right;'>txt4 (68.35 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/13</td><td style='text-align: right;'>3784346</td><td style='text-align: right;'>3787884</td><td style='text-align: right;'>52 129.2MB/s</td><td style='text-align: right;'>bin (18.21 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/14</td><td style='text-align: right;'>564691</td><td style='text-align: right;'>566487</td><td style='text-align: right;'>353 64.4MB/s</td><td style='text-align: right;'>sum (51.88 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/15</td><td style='text-align: right;'>67413</td><td style='text-align: right;'>67366</td><td style='text-align: right;'>2909 59.8MB/s</td><td style='text-align: right;'>man (59.36 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/16</td><td style='text-align: right;'>903805</td><td style='text-align: right;'>904841</td><td style='text-align: right;'>221 105.4MB/s</td><td style='text-align: right;'>pb (23.49 %)</td>
+</tr><tr><td style='text-align: left;'>BM_ZFlat/17</td><td style='text-align: right;'>2509924</td><td style='text-align: right;'>2493291</td><td style='text-align: right;'>79 70.5MB/s</td><td style='text-align: right;'>gaviota (38.27 %)</td>
+</tr></tbody></table>
+<p>Running correctness tests. All tests passed.</p>
+    </div>
+
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#industry-ref">industry <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#develop-ref">develop <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/04/22/amap-free-license" title="高德导航地图限时免费序列号">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2013/04/22/modernie-chinese-version-release" title="Modern.IE发布中文版，WEB前端开发必备神器">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1768615" async=""></script>
+<!-- UY END -->
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Shen Jian
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
+
