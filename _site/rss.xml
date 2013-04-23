@@ -5,8 +5,8 @@
         <description>程序员爸爸的博客 - Shen Jian</description>
         <link>http://sj.qmcr.me</link>
         <link>http://sj.qmcr.me</link>
-        <lastBuildDate>2013-04-23T11:22:13+08:00</lastBuildDate>
-        <pubDate>2013-04-23T11:22:13+08:00</pubDate>
+        <lastBuildDate>2013-04-23T13:27:19+08:00</lastBuildDate>
+        <pubDate>2013-04-23T13:27:19+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -28,7 +28,7 @@
 
         <item>
                 <title>一张图告诉你：产品、用户体验、用户界面、服务器和数据中心的区别</title>
-                <description>&lt;p&gt;&lt;img alt='image' src='http://pic.yupoo.com/sjqmcr/CO7f1IQg/4EIks.jpg' /&gt;&lt;/p&gt;</description>
+                <description>&lt;p&gt;&lt;img src='http://pic.yupoo.com/sjqmcr/CO7f1IQg/4EIks.jpg' alt='image' /&gt;&lt;/p&gt;</description>
                 <link>http://sj.qmcr.me/2013/04/23/one-picture-product-ui-ue-server-dc</link>
                 <guid>http://sj.qmcr.me/2013/04/23/one-picture-product-ui-ue-server-dc</guid>
                 <pubDate>2013-04-23T00:00:00+08:00</pubDate>
@@ -38,7 +38,7 @@
                 <title>google speedservice正在使用WebP图像压缩格式</title>
                 <description>&lt;p&gt;google speedservice是google提供的免费CDN服务，本站&lt;a href='http://sj.qmcr.me'&gt;sj.qmcr.me&lt;/a&gt;就使用了speedservice加速。从结果上看，加速效果相当明显。 而且令人惊奇的是，google在自己的CDN服务中会将原始图片转换为WebP格式。如果用chrome浏览器打开本站，右键点击图片选择保存图像，你会发现，保存的文件名是以&lt;a href='/2013/04/23/what-is-webp'&gt;webp&lt;/a&gt;为扩展名的。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='jpg image' src='http://pic.yupoo.com/sjqmcr/CO7vODEo/rKNy0.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://pic.yupoo.com/sjqmcr/CO7vODEo/rKNy0.jpg' alt='jpg image' /&gt;&lt;/p&gt;
 
 &lt;p&gt;实际数据显示由WebP压缩的图像尺寸只是Jpg文件的60%左右，而且几乎看不出视觉差异。 google真的很强大。&lt;/p&gt;</description>
                 <link>http://sj.qmcr.me/2013/04/23/google-speed-service-using-webp</link>
@@ -47,8 +47,16 @@
         </item>
 
         <item>
+                <title>一个关于coding的笑话</title>
+                <description>&lt;p&gt;英语课上老师问，What do you usually do to entertain yourslef? 我后面的同学回答，coding! 全班爆笑，老师很无奈。老师说，就没有别的爱好吗？ 我前面的同学回答，看别人coding！&lt;/p&gt;</description>
+                <link>http://sj.qmcr.me/2013/04/23/a-coding-joke</link>
+                <guid>http://sj.qmcr.me/2013/04/23/a-coding-joke</guid>
+                <pubDate>2013-04-23T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
                 <title>thoughtworks(中国)程序员读书雷达</title>
-                <description>&lt;p&gt;&lt;img alt='reading-radar' src='http://agiledon.github.io/images/2013/04/reading-radar.jpg' /&gt; &lt;p&gt;
+                <description>&lt;p&gt;&lt;img src='http://agiledon.github.io/images/2013/04/reading-radar.jpg' alt='reading-radar' /&gt; &lt;p&gt;
 软件业的特点是变化。若要提高软件开发的技能，就必须跟上技术发展的步伐。埋首醉心于项目开发与实战，固然能够锤炼自己的开发技巧，却难免受限于经验与学识。世界上并不存在速成的终南捷径，但阅读好的技术书籍，尤其是阅读大师们的经典著作，总能收到事半功倍之效。一位优秀的程序员，或许就是一名好的阅读者。好的阅读者，总是知道如何选择好的书籍。书海浩繁，良莠不齐。阅读技术好书，如与智者交谈，“与君一席话胜读十年书”；遭遇技术烂书，如被拐卖，“少小离家老大回，乡音无改鬓毛衰”。&lt;/p&gt; &lt;p&gt;
 ThoughtWorks作为一家学习型组织，颇为看重每一位员工的学习能力。事实上，大多数ThoughtWorker的骨子里，都溢满了读书的基因。与书相伴，与书为伍，既是一种乐趣，又是一种习惯。当习惯成为自然时，书籍就成为生活和工作不可或缺的一部分了。如果说人文历史哲学等书籍是一碗心灵鸡汤，技术书籍大抵算得上是一味营养素，读之可以直接带来养分；可若是不了解自己究竟缺了哪一种营养，乱吃乱补，结果就可能适得其反了。有鉴于此，我和同事刘龙军结合自身的阅读经验，为新入职ThoughtWorks的程序员制作了一份读书路线图。我们将范围明确为程序员，是因为作为程序员的我们，它是我们最了解的工作角色。我们筛选出了一些大家公认的经典书籍，再结合自己的阅读体会，并广泛征集了更多ThoughtWorker的意见，包括徐昊，熊节，郑晔等资深阅读者，得到了这样一份草稿。在中国公司内部推出时，这份读书路线图得到了多数人的认可和欢迎。继而，我们在成都办公室陆续针对此读书路线图展开了读书俱乐部的活动，算是做了一次全方位大面积的试水。&lt;/p&gt; &lt;p&gt;
 现在，我们觉得是推出正式版本，并面向更多受众的时机了。这就是大家现在看到的ThoughtWorks(中国)程序员读书雷达。它相较于之前的读书路线图草稿，分类更为专业，书籍筛选更为合理，并以雷达独有的优势，来展现不同的阅读维度与阅读深度。显然，读书雷达更能表达我们对所选书籍的深度认识。它可以作为学习型组织的一份知识输入，每一位程序员都可以根据自身水平与能力，选择适合自己的书籍，甚至组成一份表达阅读履历的读书路线图，在获得知识完善与汲取的过程中，提高自身能力，达至各个维度的巅峰。&lt;/p&gt;&lt;/p&gt;
@@ -137,7 +145,7 @@ The McKinsey Way《麦肯锡方法》&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;但&lt;a href='http://www.modern.ie/zh-cn'&gt;modern.IE&lt;/a&gt;与众不同地方在于，它专注于那些可能会导致旧版本IE浏览器出现问题的代码，是以解决浏览器兼容性为最终目标的检测工具。只需要几秒时间，&lt;a href='http://www.modern.ie/zh-cn'&gt;modern.IE&lt;/a&gt; 就能扫描一个网页并创建一份报告，其中罗列了可能会导致兼容性问题或影响用户体验的常见错误。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image002' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image002.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image002.jpg' alt='image002' /&gt;&lt;/p&gt;
 
 &lt;p&gt;代码检测向导目前支持3类共10种常见问题：&lt;/p&gt;
 
@@ -159,19 +167,19 @@ The McKinsey Way《麦肯锡方法》&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开&lt;a href='http://www.modern.ie/zh-cn'&gt;modern.IE&lt;/a&gt;的网站首页，在页面的下方就可以看到一个硕大输入框。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image004' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image004.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image004.jpg' alt='image004' /&gt;&lt;/p&gt;
 
 &lt;p&gt;输入网址，点击Scan按钮。网页就会跳转到扫描页面，并开始扫描。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image006' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image006.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image006.jpg' alt='image006' /&gt;&lt;/p&gt;
 
 &lt;p&gt;只需数秒，网站报告就会生成到页面上。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image008' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image008.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image008.jpg' alt='image008' /&gt;&lt;/p&gt;
 
 &lt;p&gt;报告一共分为3大类10条规则，点击条目可以展开对应的详细信息，详细信息中可以看到该规则的问题原因、重要性和解决方法。 如果规则前的图标是对勾，则表示网站符合该条规则。如果图标是感叹号，那么就有问题需要您完善了。 某网站一共扫描出了5个需要改进的规则，我们来一个个看下。 第一个规则是“框架和库”（Frameworks &amp;amp; libraries）&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image010' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image010.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image010.jpg' alt='image010' /&gt;&lt;/p&gt;
 
 &lt;p&gt;在这条规则中，&lt;a href='http://www.modern.ie/zh-cn'&gt;modern.IE&lt;/a&gt;发现网站使用了过时的jQuery库版本，所以会建议您应该升级库的最接近的兼容版本（需要少许测试）或是最新版本（需要更多测试）。&lt;/p&gt;
 
@@ -193,37 +201,37 @@ The McKinsey Way《麦肯锡方法》&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;而BrowserStack 是一个云服务，这意味着开发者不再需要花费心思在维护自己的测试设备和映像上，不论开发人员使用何种设备或操作系统，通过BrowserStack，开发人员可以像访问网页一样轻松的进行测浏览器兼容性测试，通过浏览器就可以远程操作各个系统上的不同浏览器。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image012' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image012.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image012.jpg' alt='image012' /&gt;&lt;/p&gt;
 
 &lt;p&gt;打开&lt;a href='http://www.modern.ie/zh-cn'&gt;modern.IE&lt;/a&gt;中的虚拟工具页面，在左侧的BrowserStack模块中输入要测试的网址，点击右侧按钮就会跳转到BrowserStack的注册页面.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image014' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image014.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image014.jpg' alt='image014' /&gt;&lt;/p&gt;
 
 &lt;p&gt;只需简单的填写邮箱、密码和昵称就注册好了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image016' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image016.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image016.jpg' alt='image016' /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后就会自动跳转到测试页面，等待几秒，让网页加载Flash并连接云端服务器。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image018' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image018.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image018.jpg' alt='image018' /&gt;&lt;/p&gt;
 
 &lt;p&gt;等待连接成功，您就能在右侧看到页面了，默认连接的是Windows 8下的IE10浏览器。&lt;/p&gt;
 
 &lt;p&gt;接着您就可以像平时浏览网页一样操控页面了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image020' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image020.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image020.jpg' alt='image020' /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image022' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image022.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image022.jpg' alt='image022' /&gt;&lt;/p&gt;
 
 &lt;p&gt;如果您想测试其他系统的浏览器，比如Windows Vista下的IE9，就可以在左侧的面板中依次选择系统和浏览器，然后点击Update，更新服务器。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image024' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image024.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image024.jpg' alt='image024' /&gt;&lt;/p&gt;
 
 &lt;p&gt;您也可以调出IE自带的F12开发人员工具对网页进行调试。&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image026' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image026.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image026.jpg' alt='image026' /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='image028' src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image028.jpg' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='http://uisdc.qiniudn.com/wp-content/uploads/2013/04/image028.jpg' alt='image028' /&gt;&lt;/p&gt;
 
 &lt;p&gt;OS X和Android的浏览器也都可以云端测试。&lt;/p&gt;
 

@@ -13,6 +13,7 @@ http://sj.qmcr.me/website.html
 http://sj.qmcr.me/2013/04/23/what-is-webp
 http://sj.qmcr.me/2013/04/23/one-picture-product-ui-ue-server-dc
 http://sj.qmcr.me/2013/04/23/google-speed-service-using-webp
+http://sj.qmcr.me/2013/04/23/a-coding-joke
 http://sj.qmcr.me/2013/04/22/thoughtworks-developer-reading-radar
 http://sj.qmcr.me/2013/04/22/modernie-chinese-version-release
 http://sj.qmcr.me/2013/04/22/google-opensource-compression-decompression-library-snappy
