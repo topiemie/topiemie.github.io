@@ -5,10 +5,18 @@
         <description>程序员爸爸的博客 - Shen Jian</description>
         <link>http://sj.qmcr.me</link>
         <link>http://sj.qmcr.me</link>
-        <lastBuildDate>2013-04-22T16:22:23+08:00</lastBuildDate>
-        <pubDate>2013-04-22T16:22:23+08:00</pubDate>
+        <lastBuildDate>2013-04-23T09:30:55+08:00</lastBuildDate>
+        <pubDate>2013-04-23T09:30:55+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>一张图告诉你：产品、用户体验、用户界面、服务器和数据中心的区别</title>
+                <description>&lt;p&gt;&lt;img src='http://pic.yupoo.com/sjqmcr/CO7f1IQg/4EIks.jpg' alt='image' /&gt;&lt;/p&gt;</description>
+                <link>http://sj.qmcr.me/2013/04/23/one-picture-product-ui-ue-server-dc</link>
+                <guid>http://sj.qmcr.me/2013/04/23/one-picture-product-ui-ue-server-dc</guid>
+                <pubDate>2013-04-23T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>thoughtworks(中国)程序员读书雷达</title>
