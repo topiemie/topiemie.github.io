@@ -2,8 +2,8 @@
 layout: post
 title: "高德导航地图限时免费序列号"
 description: "高德导航是高德的收费软件，现在高德宣布免费持续到29日8:02，包括IOS和Android。2013年4月29日8时02分之前可免费申请序列号"
-category: 
-tags: [industry]
+category: industry
+tags: [免费, 序列号, 导航, 地图, 高德]
 ---
 {% include JB/setup %}
 高德导航是高德的收费软件，现在高德宣布免费持续到29日8:02，包括IOS和Android。2013年4月29日8时02分之前可免费申请序列号：

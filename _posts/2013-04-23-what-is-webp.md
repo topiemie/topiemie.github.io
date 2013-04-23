@@ -2,8 +2,8 @@
 layout: post
 title: "What is WebP"
 description: "WebP是否可以成为下一代互联网图像格式新标准？"
-category: 
-tags: [industry]
+category: industry
+tags: ["webp", "图像", "格式", "互联网"]
 ---
 {% include JB/setup %}
 
@@ -17,3 +17,4 @@ x264的开发者之一：Jason Garrett-Glaser，针对WebP做出了几点评论�
 根据Google自己的测试，在有损压缩的状况下，WebP比同样画质的JPEG少了25% ～ 34%的文件大小。而在无损压缩的情形中，比起用libpng产生的PNG图片，WebP少了34%的文件大小，也比用pngout再处理过的PNG图片少了26%的文件大小。
 
 WebP是否可以成为下一代互联网图像格式新标准？我们拭目以待。
+

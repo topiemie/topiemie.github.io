@@ -2,7 +2,7 @@
 layout: post
 title: "一个关于coding的笑话"
 description: "英语课上老师问，What do you usually do to entertain yourslef?"
-category: 
+category: essay
 tags: [essay]
 ---
 {% include JB/setup %}
