@@ -27,6 +27,21 @@
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
     
     
+
+
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9828ae0088296445555c2937785034f5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
   </head>
   <body>
     <div class="navbar">
@@ -80,7 +95,7 @@
 <script type="text/javascript">
     var wumiiPermaLink = "http://sj.qmcr.me/tips.html"; //请用代码生成文章永久的链接
     var wumiiTitle = "经验技巧"; //请用代码生成文章标题
-    var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiTags = '(page.tags || '').map{|x| "#{x},"}'; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
     var wumiiSitePrefix = "http://sj.qmcr.me/";
     var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
 </script>
