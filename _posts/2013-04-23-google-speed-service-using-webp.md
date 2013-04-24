@@ -4,6 +4,7 @@ title: "google speedservice正在使用WebP图像压缩格式"
 description: "google speedservice是google提供的免费CDN服务；WebP (发音'weppy')，一种同时提供了有损压缩与无损压缩的图形档格式。Google在购买On2 Technologies后发展出来的格式，派生自图像编码格式VP8，目标是取代jpg，成为互联网图像格式的新标准。"
 category: industry
 tags: [google, webp, speedservice, cdn]
+ltags: "google,webp,speedservice,cdn"
 ---
 {% include JB/setup %}
 

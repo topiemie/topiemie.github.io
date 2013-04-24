@@ -4,6 +4,7 @@ title: "What is WebP"
 description: "WebP是否可以成为下一代互联网图像格式新标准？"
 category: industry
 tags: ["webp", "图像", "格式", "互联网"]
+ltags: "webp,图像,格式,互联网"
 ---
 {% include JB/setup %}
 

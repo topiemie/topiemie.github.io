@@ -4,6 +4,7 @@ title: "一个关于coding的笑话"
 description: "英语课上老师问，What do you usually do to entertain yourslef?"
 category: essay
 tags: [essay]
+ltags: "笑话,coding,屌丝"
 ---
 {% include JB/setup %}
 英语课上老师问，What do you usually do to entertain yourslef?<br>

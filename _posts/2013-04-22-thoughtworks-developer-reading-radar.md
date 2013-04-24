@@ -4,6 +4,7 @@ title: "thoughtworks(中国)程序员读书雷达"
 description: "ThoughtWorks作为一家学习型组织，颇为看重每一位员工的学习能力。事实上，大多数ThoughtWorker的骨子里，都溢满了读书的基因。今天ThoughtWorks中国为新入职ThoughtWorks的程序员制作了一份读书路线图。ThoughtWorks出品必属精品。"
 category: develop
 tags: [程序员, 读书, 雷达, thoughtworks]
+ltags: "程序员,读书,雷达,thoughtworks"
 ---
 {% include JB/setup %}
 ![reading-radar](http://agiledon.github.io/images/2013/04/reading-radar.jpg)

@@ -4,6 +4,7 @@ title: "google开源了内部压缩/解压缩类库-snappy，性能相当惊人"
 description: "snappy在google内部如BigTable和MapReduce中广泛应用，单核i7CPU压缩速度可以达到250MB/sec，解压缩速度达到500MB/sec"
 category: industry
 tags: [google, snappy, 开源, 压缩, 解压缩]
+ltags: "google,snappy,开源,压缩,解压缩"
 ---
 {% include JB/setup %}
 
